@@ -1,0 +1,160 @@
+<!--Chapter=printing-->
+<!--Exercise-->
+#include <stdio.h>
+
+int main() {
+    printf("Hello world");
+    return 0;
+}
+<!--Exercise-->
+#include <stdio.h>
+
+int main() {
+    printf("Multiple \n lines");
+    return 0;
+}
+<!--Exercise-->
+#include <stdio.h>
+
+int main() {
+    int a = 1;
+    if (a == 1)
+        printf("a: %d", a);
+    return 0;
+}
+<!--Exercise-->
+#include <stdio.h>
+
+int main() {
+    int a = 1;
+    if (a == 1) {
+        printf("a: %d", a);
+    }
+    return 0;
+}
+<!--Exercise-->
+#include <stdio.h>
+
+int main() {
+    float a = 1;
+    float b = 2;
+    float c = a/b;
+    printf("c: %d", c);
+    printf("c: %f", c);
+    return 0;
+}
+<!--Exercise-->
+#include <stdio.h>
+
+int main() {
+    int a = 1;
+    int b = 2;
+    float c = a/b;
+    printf("c: %d", c);
+    return 0;
+}
+<!--Exercise-->
+#include <stdio.h>
+
+int main() {
+    int a = 1;
+    int b = 2;
+    c = a/b;
+    printf("c: %d", c);
+    return 0;
+}
+<!--Exercise-->
+#include <stdio.h>
+
+int main() {
+    int a = 1;
+    int b = 2;
+    int c = a/b;
+    printf("c: %d", c);
+    return 0;
+}
+<!--Exercise-->
+#include <stdio.h>
+
+int main() {
+    int a = 10;
+    int b = 2;
+    int c = a/b;
+    printf("c: %d", c);
+    return 0;
+}
+<!--Exercise-->
+#include <stdio.h>
+
+int main() {
+    int a = 1;
+    printf("a: %d", a);
+    return 0;
+}
+<!--Exercise-->
+#include <stdio.h>
+
+int main() {
+    printf("Hello ");
+    printf("World\n");
+    printf("Hello ");
+    printf("World\n");
+    return 0;
+}
+<!--Exercise-->
+#include <stdio.h>
+
+int main() {
+    int a = 1;
+    if (a == 1) printf("a: %d", a);
+    return 0;
+}
+<!--Exercise-->
+#include <stdio.h>
+
+int main() {
+int a = 0;
+if (a == 1)
+printf("a: %d", a);
+printf("a: %d", a);
+return 0;
+}
+<!--Exercise-->
+#include <stdio.h>
+
+int main() {
+    int a = 0;
+    if (a == 1)
+        printf("a: %d", a);
+    printf("a: %d", a);
+    return 0;
+}
+<!--Exercise-->
+#include <stdio.h>
+
+int main() {
+    int a = 0;
+    if (a == 1)
+        printf("a: %d", a);
+        printf("a: %d", a);
+    return 0;
+}
+<!--Exercise-->
+#include <stdio.h>
+
+int main() {
+    int a = 0;
+    if (a == 1)
+        printf("a: %d", a);
+    return 0;
+}
+<!--Exercise-->
+#include <stdio.h>
+
+int main() {
+    int a = 1;
+    if (a = 1)
+        printf("a: %d", a);
+    return 0;
+}
+

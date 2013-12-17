@@ -1,0 +1,76 @@
+<!--Chapter=printing-->
+<!--Exercise-->
+print "Hello World"
+<!--Exercise-->
+print "python rocks"
+print "c++ sucks"
+<!--Exercise-->
+print "the comma ",
+print "prevents the",
+print "newline"
+<!--Exercise-->
+print """This is something
+that runs
+across multiple lines"""
+<!--Exercise-->
+print 'you can use'
+print "any of "
+print """these ways"""
+<!--Exercise-->
+print 'These are double quotes " '
+print "These are single quotes ' "
+<!--Exercise-->
+print "This is called Escaping"
+print "These are double quotes \" "
+<!--Exercise-->
+a = 59
+print a
+<!--Exercise-->
+a = 10.123456
+print a
+print "a is :", a
+print "a is %d" % a
+print "a is %e" % a
+
+<!--Chapter=comments-->
+<!--Exercise-->
+print "This is code" #and this is a comment
+#print "This code is disabled"
+
+#This is another comment
+<!--Exercise-->
+print "block comments"
+""" This is a trick
+to write
+block comments"""
+<!--Exercise-->
+print "block comments"
+''' This
+also
+works '''
+
+<!--Chapter=math-->
+<!--Exercise-->
+topSpeedMph = 260
+topSpeed = topSpeedMph * 1.60934
+print 'the bugatti veyron\'s top speed is %d kmph", topspeed
+<!--Exercise-->
+topSpeed = 260 #mph
+topSpeedMpg = 3 #mpg
+tank = 26 #gallons
+time = topSpeed / topSpeedMpg / tank
+print 'the veyron will empty its tank in %f mins at top speed', time
+
+<!--Chapter=conditionals-->
+<!--Exercise-->
+a = 12
+if a > 10
+    print "a is greater than 10"
+<!--Exercise-->
+a = 12
+if a > 10:
+    print "a is greater than 10"
+<!--Exercise-->
+a = 12
+if a > 10:
+print "a is greater than 10"

@@ -1,0 +1,5 @@
+<!--Chapter=printing-->
+<!--Exercise-->
+(print "Hello World")
+<!--Exercise-->
+(+ 3 2)

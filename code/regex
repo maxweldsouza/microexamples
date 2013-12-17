@@ -1,0 +1,79 @@
+<!--Chapter=basics-->
+<!--Exercise-->
+import re
+
+input = "penn and teller, bullshit"
+
+regex = r"and"
+
+output = re.findall(regex, input);
+print output
+<!--Exercise-->
+import re
+
+input = "i am the stig"
+
+regex = r"i"
+
+output = re.findall(regex, input);
+print output
+<!--Exercise-->
+import re
+
+input = "this is 5 abc"
+
+regex = r"5"
+
+output = re.findall(regex, input);
+print output
+
+<!--Exercise-->
+import re
+
+input = "this is 5 67abc"
+
+regex = r"[0-9]"
+
+output = re.findall(regex, input);
+print output
+
+<!--Exercise-->
+import re
+
+input = "ab 6b 5b ac cc dc"
+
+regex = r".b"
+
+output = re.findall(regex, input);
+print output
+
+<!--Exercise-->
+import re
+
+input = "ab cb db ac cc dc"
+
+regex = r"b."
+
+output = re.findall(regex, input);
+print output
+
+
+<!--Exercise-->
+import re
+
+input = "bab b5b beb bub bba bbc"
+
+regex = r"b.b"
+
+output = re.findall(regex, input);
+print output
+
+<!--Exercise-->
+import re
+
+input = "bab b5b beb bub bba bbc"
+
+regex = r"b.b"
+
+output = re.findall(regex, input);
+print output
