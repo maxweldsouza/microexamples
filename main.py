@@ -15,7 +15,7 @@ class ExampleHandler(tornado.web.RequestHandler):
         chapters = examples.getChapters(language)
         exs = examples.exercise(language, chapter)
         self.render("examples.html", language=language, languages=langList,
-                langNames=langNames, chapters=chapters, exercises=exs)
+                langNames=langNames, chapters=chapters, chapter=chapter, exercises=exs)
 
 settings = {
     "static_path": os.path.join(os.path.dirname(__file__), "assets"),

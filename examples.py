@@ -19,7 +19,7 @@ def getChapters(language):
     chapters = []
     while line:
         if token(line) == Tokens.CHAPTER:
-            chapters.append(chapter(line).title())
+            chapters.append(chapter(line))
         line = fhandle.readline()
     return chapters
 
@@ -28,7 +28,7 @@ def getExercises(language, chapter):
     dir = os.path.join(dir, language)
     chapdir = os.path.join(dir, chapter)
     exercises = [ex for ex in os.listdir(chapdir) if ex.startswith('ex') and
-            ex.endswith(langTable['python'])]
+            ex.endswith(langTable[language])]
     return sorted(exercises)
 
 class Tokens:
@@ -62,16 +62,4 @@ def exercise(language, chapter):
         input = open(file, 'r')
         output = open(outputfile, 'r')
         value.append([input.read(), output.read()])
-    for item in value:
-        print item[0]
-        print item[1]
     return value
-
-def outputs(language, chapter):
-    exfiles = getExercises(language, chapter);
-    for ex in exfiles:
-        dir = os.path.join(os.getcwd(), 'languages')
-        dir = os.path.join(dir, language)
-        chapdir = os.path.join(dir, chapter)
-        file = os.path.join(chapdir, ex)
-    return open(file, 'r')

@@ -143,15 +143,6 @@ int main() {
 #include <stdio.h>
 
 int main() {
-    int a = 0;
-    if (a == 1)
-        printf("a: %d", a);
-    return 0;
-}
-<!--Exercise-->
-#include <stdio.h>
-
-int main() {
     int a = 1;
     if (a = 1)
         printf("a: %d", a);

@@ -87,7 +87,12 @@ TODO Add permalinks
 
                         <ul class="nav nav-pills nav-stacked">
                             {% for chap in chapters %}
-                            <li><a href="/examples/{{ language }}/{{ chap }}">{{ chap }}</a></li>
+                            {% if chap == chapter %}
+                            <li class="active">
+                            {% else %}
+                            <li>
+                            {% end %}
+                            <a href="/examples/{{ language }}/{{ chap }}">{{ chap.title() }}</a></li>
                             {% end %}
                         </ul>
                     </div>
@@ -105,8 +110,8 @@ TODO Add permalinks
                 <hr>
 
                 <footer>
-                <p class="text-right text-muted"><a href="#top">Back to top</a>
-                <p class="text-right">&copy; Maxwel D'souza, 2013</p>
+                    <p class="text-right text-muted"><a href="#top">Back to top</a>
+                    <p class="text-right">&copy; Maxwel D'souza, 2013</p>
                 </footer>
             </div> <!-- /container -->
 
@@ -120,11 +125,11 @@ TODO Add permalinks
             <script src="/assets/highlight/highlight.pack.js"></script>
             <script>hljs.initHighlightingOnLoad();</script>
             <script type="text/javascript">
-                var currentPopover = 0;
-                var popovers = [];
+var currentPopover = 0;
+var popovers = [];
 
-                // Initialize all the popovers to be "manually" displayed.
-                popovers.push($("#dropdown").popover({ 
+// Initialize all the popovers to be "manually" displayed.
+popovers.push($("#dropdown").popover({ 
 trigger: 'manual' ,
 placement : 'bottom',
 title : 'Get Started',
@@ -149,6 +154,6 @@ $("#dropdown").click(function() {
             currentPopover = 1;
             }
             });
-        </script>
-    </body>
-</html>
+            </script>
+            </body>
+            </html>
