@@ -9,6 +9,7 @@ langTable = {
             'clojure': '.clj',
             'regex': '.py',
             'ruby': '.rb',
+            'clisp': '.lisp'
             }
 
 def getChapters(language):
@@ -46,7 +47,6 @@ def token(line):
 def chapter(line):
     line = re.sub(r'^<!--Chapter=', '', line)
     line = re.sub(r'-->\n$', '', line)
-    print line
     return line
 
 def exercise(language, chapter):
