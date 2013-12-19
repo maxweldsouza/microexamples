@@ -1,11 +1,21 @@
 #TODO C compilation
 #TODO Permalinks
+#TODO Add search feature
+#TODO Social bookmarking
+#TODO Goto next chapter
+#TODO Improve performance
+#TODO Add google analytics
+#TODO Change title based on page
+#TODO Reformat code
+#TODO Changeable Color Themes
+#TODO Add permalinks
 
 import re
 import os
 
+#TODO Repeated everywhere
 #This is the list of languages supported
-languages = {
+langTable = {
             'c': '.c',
             'python': '.py',
             'haskell': '.hs',
@@ -14,8 +24,6 @@ languages = {
             'ruby': '.rb',
             'clisp': '.lisp'
             }
-for language in languages:
-    print language
 
 class Tokens:
     CHAPTER, EXERCISE, CODE = range(3)
@@ -39,7 +47,7 @@ def exercise():
     return
 
 ex = 1
-for language in languages:
+for language in langTable:
     f = open(os.path.join('code', language), 'r')
     line = f.readline()
 
@@ -55,7 +63,7 @@ for language in languages:
 
         if linetoken == Tokens.EXERCISE:
             exstring = '%03d' % ex
-            exercise = 'ex' + exstring + languages[language]
+            exercise = 'ex' + exstring + langTable[language]
             exercise = os.path.join(directory, exercise)
             w = open(exercise, 'w+')
             ex += 1

@@ -2,15 +2,7 @@ import os
 import re
 from os.path import isfile, join
 
-langTable = {
-            'c': '.c',
-            'python': '.py',
-            'haskell': '.hs',
-            'clojure': '.clj',
-            'regex': '.py',
-            'ruby': '.rb',
-            'clisp': '.lisp'
-            }
+from build import langTable
 
 def getChapters(language):
     dir = os.path.join(os.getcwd(), 'code')
