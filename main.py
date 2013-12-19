@@ -2,10 +2,7 @@ import os
 import tornado.ioloop
 import tornado.web
 import examples
-
-langList = ['c','python','haskell','clisp']
-langNames = {'c': 'C', 'python': 'Python', 'haskell': 'Haskell', 'clisp': 'Common Lisp'}
-hlName = {'c': 'c', 'python': 'python', 'haskell': 'haskell', 'clisp': 'lisp'}
+from build import langList, langNames, hlName
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):

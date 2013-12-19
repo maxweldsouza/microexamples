@@ -13,7 +13,6 @@
 import re
 import os
 
-#TODO Repeated everywhere
 #This is the list of languages supported
 langTable = {
             'c': '.c',
@@ -24,6 +23,9 @@ langTable = {
             'ruby': '.rb',
             'clisp': '.lisp'
             }
+langList = ['c','python','haskell','clisp']
+langNames = {'c': 'C', 'python': 'Python', 'haskell': 'Haskell', 'clisp': 'Common Lisp'}
+hlName = {'c': 'c', 'python': 'python', 'haskell': 'haskell', 'clisp': 'lisp'}
 
 class Tokens:
     CHAPTER, EXERCISE, CODE = range(3)
@@ -66,6 +68,7 @@ for language in langTable:
             exercise = 'ex' + exstring + langTable[language]
             exercise = os.path.join(directory, exercise)
             w = open(exercise, 'w+')
+            #TODO close file?
             ex += 1
 
         if linetoken == Tokens.CODE:
