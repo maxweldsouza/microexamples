@@ -1,6 +1,6 @@
-#TODO Automatic build of chapter outputs
-#TODO Automatic no of exercises
-#TODO ignore spaces just after and before exercises
+#TODO C compilation
+#TODO Permalinks
+
 import re
 import os
 
@@ -12,6 +12,7 @@ languages = {
             'clojure': '.clj',
             'regex': '.py',
             'ruby': '.rb',
+            'clisp': '.lisp'
             }
 for language in languages:
     print language
@@ -53,7 +54,8 @@ for language in languages:
                 os.makedirs(directory)
 
         if linetoken == Tokens.EXERCISE:
-            exercise = 'ex' + str(ex) + languages[language]
+            exstring = '%03d' % ex
+            exercise = 'ex' + exstring + languages[language]
             exercise = os.path.join(directory, exercise)
             w = open(exercise, 'w+')
             ex += 1

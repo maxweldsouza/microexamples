@@ -67,7 +67,7 @@ TODO Add permalinks
                             {% end %}
                         </ul>
                         </li>
-                        <li><a href="faq.php">FAQ</a></li>
+                        <li><a href="/faq.html">FAQ</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
@@ -80,7 +80,7 @@ TODO Add permalinks
 
                 <!-- Example row of columns -->
                 <div class="page-header">
-                    <h1><?php echo ucfirst($language) ?></h1>
+                    <h1>{{ title }}</h1>
                 </div>
                 <div class="row">
                     <div class="col-lg-3">
@@ -100,7 +100,7 @@ TODO Add permalinks
                     <div class="col-lg-9">
                         {% for exer in exercises %}
                         <h2>Exercise</h2>
-                        <pre class="{{ language }}"><code>{{ exer[0] }}</code></pre>
+                        <pre class="{{ hlName }}"><code>{{ exer[0] }}</code></pre>
                         <pre class="no-highlight"><code>{{ exer[1] }}</code></pre>
                         {% end %}
                     </div>

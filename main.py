@@ -5,6 +5,7 @@ import examples
 
 langList = ['c','python','haskell','clisp']
 langNames = {'c': 'C', 'python': 'Python', 'haskell': 'Haskell', 'clisp': 'Common Lisp'}
+hlName = {'c': 'c', 'python': 'python', 'haskell': 'haskell', 'clisp': 'lisp'}
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
@@ -17,7 +18,12 @@ class ExampleHandler(tornado.web.RequestHandler):
             chapter = chapters[0]
         exs = examples.exercise(language, chapter)
         self.render("examples.html", language=language, languages=langList,
-                langNames=langNames, chapters=chapters, chapter=chapter, exercises=exs)
+                langNames=langNames, chapters=chapters, chapter=chapter,
+                exercises=exs, hlName=hlName[language], title=langNames.get(language))
+
+class FaqHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.render("faq.html", languages=langList, langNames=langNames)
 
 settings = {
     "static_path": os.path.join(os.path.dirname(__file__), "assets"),
@@ -28,6 +34,7 @@ application = tornado.web.Application([
     (r"/assets/(.*)",tornado.web.StaticFileHandler, {"path": "./assets"},),
     (r"/examples/(.*)/(.*)", ExampleHandler),
     (r"/examples/(.*)", ExampleHandler),
+    (r"/faq.html", FaqHandler),
     ], **settings)
 
 if __name__ == "__main__":
