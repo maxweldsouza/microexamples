@@ -1,3 +1,4 @@
+#TODO Active highlight navigation bar
 #TODO C compilation
 #TODO Permalinks
 #TODO Add search feature
