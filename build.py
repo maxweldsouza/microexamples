@@ -24,9 +24,9 @@ langTable = {
             'ruby': '.rb',
             'clisp': '.lisp'
             }
-langList = ['c','python','haskell','clisp']
-langNames = {'c': 'C', 'python': 'Python', 'haskell': 'Haskell', 'clisp': 'Common Lisp'}
-hlName = {'c': 'c', 'python': 'python', 'haskell': 'haskell', 'clisp': 'lisp'}
+langList = ['c','python','haskell','clisp', 'regex']
+langNames = {'c': 'C', 'python': 'Python', 'haskell': 'Haskell', 'clisp': 'Common Lisp', 'regex': 'Regex'}
+hlName = {'c': 'c', 'python': 'python', 'haskell': 'haskell', 'clisp': 'lisp', 'regex': 'python'}
 
 class Tokens:
     CHAPTER, EXERCISE, CODE = range(3)

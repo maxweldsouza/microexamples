@@ -55,14 +55,21 @@ works '''
 <!--Exercise-->
 topSpeedMph = 260
 topSpeed = topSpeedMph * 1.60934
-print 'the bugatti veyron\'s top speed is %d kmph", topspeed
+print 'the bugatti veyron\'s top speed is %d kmph" % topspeed
 <!--Exercise-->
 topSpeed = 260 #mph
 topSpeedMpg = 3 #mpg
 tank = 26 #gallons
 time = topSpeed / topSpeedMpg / tank
-print 'the veyron will empty its tank in %f mins at top speed', time
-
+print 'the veyron will empty its tank in %f mins at top speed' % time
+<!--Exercise-->
+a = 3
+cube = a * a * a
+print a
+<!--Exercise-->
+print (3 + 5) * 5 - 3
+<!--Exercise-->
+print (5 * 6) <= 28 + 2
 <!--Chapter=conditionals-->
 <!--Exercise-->
 a = 12
@@ -76,3 +83,27 @@ if a > 10:
 a = 12
 if a > 10:
 print "a is greater than 10"
+<!--Chapter=lists-->
+<!--Exercise-->
+cars = ['ariel atom', 'ferrari f430', 'aston martin db9']
+print cars
+<!--Exercise-->
+items = ['nexus 7', 13, 198.3856, 'rocketship']
+print items
+<!--Exercise-->
+humbug = ['homeopathy', 'magnet therapy', 'reiki']
+print humbug[3]
+<!--Exercise-->
+humbug = ['homeopathy', 'magnet therapy', 'reiki']
+humbug.append('astrology')
+print humbug
+<!--Exercise-->
+list = ['one', 'two', 'three', 'four', 'five', 'six', 'seven']
+print list[-1]
+print list[-2]
+print list[-3]
+<!--Chapter=dictionaries-->
+<!--Chapter=trees-->
+<!--Chapter=loops-->
+<!--Chapter=functions-->
+<!--Chapter=classes-->
