@@ -2,12 +2,12 @@
 <!--Exercise-->
 print "Hello World"
 <!--Exercise-->
-print "Hello World"
+print "Your first error'
 <!--Exercise-->
-print "python rocks"
-print "c++ sucks"
+print "python is beautiful"
+print "c++ is ugly"
 <!--Exercise-->
-print "the comma ",
+print "the comma",
 print "prevents the",
 print "newline"
 <!--Exercise-->
@@ -19,11 +19,30 @@ print 'you can use'
 print "any of "
 print """these ways"""
 <!--Exercise-->
+print "These are double quotes " "
+<!--Exercise-->
 print 'These are double quotes " '
+<!--Exercise-->
 print "These are single quotes ' "
 <!--Exercise-->
 print "This is called Escaping"
 print "These are double quotes \" "
+<!--Exercise-->
+print 99
+print 3.14
+<!--Exercise-->
+print "%s and %s" % "penn", "teller"
+<!--Exercise-->
+print "You must read %s" % "Hackers and painters"
+print "by %s" % "Paul Graham"
+<!--Exercise-->
+print "There are %d cards in a deck" % 52
+<!--Exercise-->
+print "Avogadros No: %e" % 6.023e23
+print "Avogadros No: %f" % 6.023e23
+<!--Exercise-->
+print "%e" % 0.0002
+print "%f" % 0.0002
 <!--Exercise-->
 a = 59
 print a
@@ -33,24 +52,12 @@ print a
 print "a is :", a
 print "a is %d" % a
 print "a is %e" % a
-
 <!--Chapter=comments-->
 <!--Exercise-->
 print "This is code" #and this is a comment
 #print "This code is disabled"
 
 #This is another comment
-<!--Exercise-->
-print "block comments"
-""" This is a trick
-to write
-block comments"""
-<!--Exercise-->
-print "block comments"
-''' This
-also
-works '''
-
 <!--Chapter=math-->
 <!--Exercise-->
 topSpeedMph = 260
@@ -58,7 +65,7 @@ topSpeed = topSpeedMph * 1.60934
 print 'the bugatti veyron\'s top speed is %d kmph" % topspeed
 <!--Exercise-->
 topSpeed = 260 #mph
-topSpeedMpg = 3 #mpg
+mpg = 3 #mpg
 tank = 26 #gallons
 time = topSpeed / topSpeedMpg / tank
 print 'the veyron will empty its tank in %f mins at top speed' % time
@@ -83,6 +90,14 @@ if a > 10:
 a = 12
 if a > 10:
 print "a is greater than 10"
+<!--Exercise-->
+day = "sunday"
+if day = "sunday":
+    print "take a nap"
+<!--Exercise-->
+day = "sunday"
+if day == "sunday":
+    print "take a nap"
 <!--Chapter=lists-->
 <!--Exercise-->
 cars = ['ariel atom', 'ferrari f430', 'aston martin db9']
@@ -106,4 +121,31 @@ print list[-3]
 <!--Chapter=trees-->
 <!--Chapter=loops-->
 <!--Chapter=functions-->
+<!--Exercise-->
+def SaySomething(a):
+    print "Inside"
+    print "The"
+    print "Function"
+print "Outside The Function"
+SaySomething()
+SaySomething()
+SaySomething()
+<!--Exercise-->
+print Square(5)
+def Square(a):
+    return a * a
+<!--Exercise-->
+def Square(a):
+    return a * a
+print Square(5)
+<!--Exercise-->
+def SayHello(a):
+    print "Hello"
+SayHello()
+<!--Exercise-->
+def Cube():
+    def Square(a):
+        return a * a
+    return a * Square(a)
+print Cube()
 <!--Chapter=classes-->

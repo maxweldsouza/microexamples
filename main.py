@@ -22,6 +22,10 @@ class FaqHandler(tornado.web.RequestHandler):
     def get(self):
         self.render("faq.html", languages=langList, langNames=langNames)
 
+class CourseHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.render("course.html", languages=langList, langNames=langNames)
+
 settings = {
     "static_path": os.path.join(os.path.dirname(__file__), "assets"),
 }
@@ -32,6 +36,7 @@ application = tornado.web.Application([
     (r"/examples/(.*)/(.*)", ExampleHandler),
     (r"/examples/(.*)", ExampleHandler),
     (r"/faq.html", FaqHandler),
+    (r"/course.html", CourseHandler),
     ], **settings)
 
 if __name__ == "__main__":
