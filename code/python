@@ -143,9 +143,9 @@ def SayHello(a):
     print "Hello"
 SayHello()
 <!--Exercise-->
-def Cube():
-    def Square(a):
-        return a * a
+def Cube(a):
+    def Square(b):
+        return b * b
     return a * Square(a)
-print Cube()
+print Cube(3)
 <!--Chapter=classes-->
