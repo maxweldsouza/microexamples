@@ -1,3 +1,6 @@
+#TODO Rename files
+#TODO Add licence
+
 #TODO Active highlight navigation bar
 #TODO C compilation
 #TODO Permalinks
@@ -14,9 +17,11 @@
 import re
 import os
 
-titles = ['Python', 'Haskell', 'Common Lisp', 'Regex', 'Javascript']
+#Page title as it appears in the navbar
+titles = ['Python', 'Haskell', 'Common Lisp', 'Reg Exp', 'Javascript']
 folders = ['python', 'haskell', 'clisp', 'regex', 'javascript']
 extensions =['.py', '.hs', '.clj', '.py', '.rb', '.lisp', '.js']
+#name for highlight.js
 highlights = ['python', 'haskell', 'clisp', 'regex', 'javascript']
 
 class Tokens:

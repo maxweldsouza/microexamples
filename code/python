@@ -33,7 +33,7 @@ print 3.14
 <!--Exercise-->
 print "%s and %s" % "penn", "teller"
 <!--Exercise-->
-print "You must read %s" % "Hackers and painters"
+print "You must read %s" % "Hackers and Painters"
 print "by %s" % "Paul Graham"
 <!--Exercise-->
 print "There are %d cards in a deck" % 52
@@ -62,12 +62,12 @@ print "This is code" #and this is a comment
 <!--Exercise-->
 topSpeedMph = 260
 topSpeed = topSpeedMph * 1.60934
-print 'the bugatti veyron\'s top speed is %d kmph" % topspeed
+print 'the bugatti veyron\'s top speed is %d kmph' % topSpeed
 <!--Exercise-->
 topSpeed = 260 #mph
 mpg = 3 #mpg
 tank = 26 #gallons
-time = topSpeed / topSpeedMpg / tank
+time = topSpeed / mpg / tank * 60
 print 'the veyron will empty its tank in %f mins at top speed' % time
 <!--Exercise-->
 a = 3
@@ -109,6 +109,10 @@ print items
 humbug = ['homeopathy', 'magnet therapy', 'reiki']
 print humbug[3]
 <!--Exercise-->
+#array indices start with 0
+humbug = ['homeopathy', 'magnet therapy', 'reiki']
+print humbug[2]
+<!--Exercise-->
 humbug = ['homeopathy', 'magnet therapy', 'reiki']
 humbug.append('astrology')
 print humbug
@@ -122,14 +126,16 @@ print list[-3]
 <!--Chapter=loops-->
 <!--Chapter=functions-->
 <!--Exercise-->
-def SaySomething(a):
-    print "Inside"
-    print "The"
-    print "Function"
+def SaySomething():
+    print "Inside The Function"
 print "Outside The Function"
+
 SaySomething()
 SaySomething()
-SaySomething()
+<!--Exercise-->
+def SaySomething():
+    print "Inside The Function"
+print "This will print anyway"
 <!--Exercise-->
 print Square(5)
 def Square(a):
