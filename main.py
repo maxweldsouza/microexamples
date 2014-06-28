@@ -2,11 +2,11 @@ import os
 import tornado.ioloop
 import tornado.web
 import examples
-from build import langList, langNames, hlName
+from build import titles, folders, extensions, highlights
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
-        self.render("main.html", languages=langList, langNames=langNames)
+        self.render("main.html", folders=folders, titles=titles)
 
 class ExampleHandler(tornado.web.RequestHandler):
     def get(self, language, chapter=''):
@@ -14,17 +14,18 @@ class ExampleHandler(tornado.web.RequestHandler):
         if chapter == "":
             chapter = chapters[0]
         exs = examples.exercise(language, chapter)
-        self.render("examples.html", language=language, languages=langList,
-                langNames=langNames, chapters=chapters, chapter=chapter,
-                exercises=exs, hlName=hlName[language], title=langNames.get(language))
+        self.render("examples.html", folder=language, folders=folders,
+                chapters=chapters, chapter=chapter,
+                titles=titles, title=titles[folders.index(language)],
+                exercises=exs, highlights=highlights)
 
 class FaqHandler(tornado.web.RequestHandler):
     def get(self):
-        self.render("faq.html", languages=langList, langNames=langNames)
+        self.render("faq.html", folders=folders, titles=titles)
 
 class CourseHandler(tornado.web.RequestHandler):
     def get(self):
-        self.render("course.html", languages=langList, langNames=langNames)
+        self.render("course.html", folders=folders, titles=titles)
 
 settings = {
     "static_path": os.path.join(os.path.dirname(__file__), "assets"),

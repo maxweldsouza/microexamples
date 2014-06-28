@@ -14,27 +14,10 @@
 import re
 import os
 
-#This is the list of languages supported
-langTable = {
-            'c': '.c',
-            'python': '.py',
-            'haskell': '.hs',
-            'clojure': '.clj',
-            'regex': '.py',
-            'ruby': '.rb',
-            'clisp': '.lisp',
-            'javascript': '.js'
-            }
-#The languages in langList will be visible on the site
-langList = []
-#langList.append('c')
-langList.append('python')
-#langList.append('haskell')
-#langList.append('clisp')
-#langList.append('regex')
-#langList.append('javascript')
-langNames = {'c': 'C', 'python': 'Python', 'haskell': 'Haskell', 'clisp': 'Common Lisp', 'regex': 'Regex', 'javascript': 'Javascript'}
-hlName = {'c': 'c', 'python': 'python', 'haskell': 'haskell', 'clisp': 'lisp', 'regex': 'python', 'javascript': 'javascript'}
+titles = ['Python', 'Haskell', 'Common Lisp', 'Regex', 'Javascript']
+folders = ['python', 'haskell', 'clisp', 'regex', 'javascript']
+extensions =['.py', '.hs', '.clj', '.py', '.rb', '.lisp', '.js']
+highlights = ['python', 'haskell', 'clisp', 'regex', 'javascript']
 
 class Tokens:
     CHAPTER, EXERCISE, CODE = range(3)
@@ -59,7 +42,7 @@ def exercise():
 
 def buildcode():
     ex = 1
-    for language in langTable:
+    for language in folders:
         f = open(os.path.join('code', language), 'r')
         line = f.readline()
     
@@ -75,7 +58,7 @@ def buildcode():
     
             if linetoken == Tokens.EXERCISE:
                 exstring = '%03d' % ex
-                exercise = 'ex' + exstring + langTable[language]
+                exercise = 'ex' + exstring + extensions[folders.index(language)]
                 exercise = os.path.join(directory, exercise)
                 w = open(exercise, 'w+')
                 #TODO close file?

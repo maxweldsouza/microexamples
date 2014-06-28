@@ -139,7 +139,7 @@ def Square(a):
     return a * a
 print Square(5)
 <!--Exercise-->
-def SayHello(a):
+def SayHello():
     print "Hello"
 SayHello()
 <!--Exercise-->

@@ -12,8 +12,8 @@
                 <div class="nav-collapse">
                     <ul class="nav navbar-nav">
                         <!-- TODO class="active" -->
-                            {% for lang in languages %}
-                            <li><a href="/examples/{{ lang }}">{{ str.title(langNames[lang]) }}</a></li>
+                            {% for fld in folders %}
+                            <li><a href="/examples/{{ fld }}">{{ titles[folders.index(fld)] }}</a></li>
                             {% end %}
                         <li><a href="/faq.html">FAQ</a></li>
                         <li><a href="/course.html">Ten Year Course</a></li>

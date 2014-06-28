@@ -1,8 +1,7 @@
 import os
 import re
 from os.path import isfile, join
-
-from build import langTable
+from build import titles, folders, extensions, highlights
 
 def getChapters(language):
     dir = os.path.join(os.getcwd(), 'code')
@@ -21,7 +20,7 @@ def getExercises(language, chapter):
     dir = os.path.join(dir, language)
     chapdir = os.path.join(dir, chapter)
     exercises = [ex for ex in os.listdir(chapdir) if ex.startswith('ex') and
-            ex.endswith(langTable[language])]
+            ex.endswith(extensions[folders.index(language)])]
     return sorted(exercises)
 
 class Tokens:
@@ -50,7 +49,7 @@ def exercise(language, chapter):
         chapdir = os.path.join(dir, chapter)
         file = os.path.join(chapdir, ex)
 
-        outputfile = os.path.join(chapdir, ex.replace(langTable[language], ".out"))
+        outputfile = os.path.join(chapdir, ex.replace(extensions[folders.index(language)], ".out"))
         input = open(file, 'r')
         output = open(outputfile, 'r')
         value.append([input.read(), output.read()])
