@@ -21,11 +21,11 @@ import re
 import os
 
 #Page title as it appears in the navbar
-titles = ['Python', 'Haskell', 'Common Lisp', 'Reg Exp', 'Javascript']
-folders = ['python', 'haskell', 'clisp', 'regex', 'javascript']
-extensions =['.py', '.hs', '.clj', '.py', '.rb', '.lisp', '.js']
+titles = ['Python', 'Haskell', 'Common Lisp', 'Reg Exp']
+folders = ['python', 'haskell', 'clisp', 'regex']
+extensions =['.py', '.hs', '.lisp', '.py']
 #name for highlight.js
-highlights = ['python', 'haskell', 'clisp', 'regex', 'javascript']
+highlights = ['python', 'haskell', 'clisp', 'regex']
 
 class Tokens:
     CHAPTER, EXERCISE, CODE = range(3)

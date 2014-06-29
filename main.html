@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+    <link rel="icon" href="">
 
     <title>microExamples - Learn code by reading examples</title>
 
@@ -38,30 +38,31 @@
 
         <div class="cover-container">
 
+          <!--
           <div class="masthead clearfix">
             <div class="inner">
               <ul class="nav masthead-nav">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="/faq.html">FAQ</a></li>
                 <li><a href="/course.html">10Y Course</a></li>
               </ul>
             </div>
           </div>
+          -->
 
           <div class="inner cover">
             <h1 class="cover-heading">micro<strong>Examples</strong></h1>
             <p class="lead">Learn code just by reading examples.
             <br>
-              Get started:
+              Get Started &gt;
               {% for fld in folders %}
-                 <a href="/examples/{{ fld }}">{{ titles[folders.index(fld)] }}</a> |
+                 <a href="/examples/{{ fld }}">{{ titles[folders.index(fld)] }}</a> .
               {% end %}
             </p>
           </div>
 
           <div class="mastfoot">
             <div class="inner">
-              <p>Contribute at <a href="http://getbootstrap.com/">Github</a></p>
+              <p>Contribute on <a href="http://getbootstrap.com/">Github</a></p>
             </div>
           </div>
 
