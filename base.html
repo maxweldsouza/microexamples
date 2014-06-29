@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include head.html %}
+    <body>
+    {% include navbar.html %}
+        <div class="container">
+
+            <div class="jumbotron">
+                <h1>Read Code</h1>
+                <p>Learn programming languages like Python, Haskell, Clojure, C, Scala and many more just by reading examples!!</p>
+                <p><a id="pop" data-original-title="A Title" href="#" class="btn btn-lg btn-primary" data-toggle="popover" title="" data-content="And here's some amazing content. It's very engaging. right?">Get Started</a></p>
+            </div>
+
+            <div class="body-content">
+
+                <!-- Example row of columns -->
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h2>What's this site?</h2>
+                        <p>This is a site where you can learn programming languages just by reading examples. There are no explanations whatsever, just source code and the corresponding output.</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <h2>Who is it for?</h2>
+                        <p>This site is for programmers who already know one or more languages and want to learn another language. If you are completely new to programming GO AWAY!!</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <h2>Who are you?</h2>
+                        <p>I am a Mechanical Engineer and currently a research scholar at the Indian Institute of Technology, Bombay. I have a passion for programming and have a great desire to learn new interesting languages.</p>
+                    </div>
+                </div>
+
+                {% include footer.html %}
+            </div> <!-- /container -->
+
+{% include scripts.html %}
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!--Chapter=printing-->
+<!--Exercise-->
+(print "Hello World")
+<!--Exercise-->
+(print "Hello World") ;This is a comment
+;comments are made with semicolons
+<!--Chapter=math-->
+<!--Exercise-->
+(print (+ 3 2))
+(print (+ 12 3 2))
+<!--Exercise-->
+(print (* 3 (+ 2 5)))
+<!--Chapter=lists-->
+<!--Exercise-->
+(print (list a b c d))
+<!--Exercise-->
+(print (list 1 2 3 4))
+<!--Exercise-->
+(print (cons 1 2))
+<!--Exercise-->
+(print (cons a b))
+<!--Exercise-->
+(print (cons 1 2 3))
+<!--Exercise-->
+(print (cons 7 (cons 1 (cons 3 6)))
+<!--Exercise-->
+(print (cons 7 (cons 1 (cons 3 6))))
+<!--Exercise-->
+(print (if (> 5 3) 8 9))
+<!--Exercise-->
+(defun square(x)
+    (* x x))
+(print (square 7))
+<!--Exercise-->
+(defun square(x)
+    (* x x))
+(print (square (square 2)))
+<!--Exercise-->
+(defun sum-of-natural-nos(x)
+    (/ (* x (+ x 1) 2)
+(print (sum-of-natural-nos 7))
+<!--Exercise-->
+(defun factorial(x)
+    (if (= x 1)
+    1
+    (* x (factorial (- x 1)))))
+(print (factorial 5))

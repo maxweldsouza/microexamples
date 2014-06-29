@@ -1,0 +1,77 @@
+<!--Chapter=printing-->
+<!--Exercise-->
+putStrLn "Hello World"
+<!--Exercise-->
+main = do
+    putStrLn "Hello World"
+<!--Chapter=math-->
+<!--Exercise-->
+main = do
+    print True && False
+<!--Exercise-->
+main = do
+    print (True && False)
+<!--Exercise-->
+main = do
+    print "Equal To"
+    print (10 == 20)
+    print "Not Equal To"
+    print (10 /= 20)
+<!--Exercise-->
+main = do
+    print [6, 5, 4, 3, 2, 1]
+<!--Exercise-->
+main = do
+    print ["aston", "martin", "db9"]
+<!--Exercise-->
+main = do
+    print ["aston", 9, "db9"]
+<!--Exercise-->
+main = do
+    print [-5..5]
+<!--Exercise-->
+main = do
+    print [24, 634, -5..5, 354]
+<!--Exercise-->
+main = do
+    print [1, 2..10]
+    print [10, 9..1]
+    print [0.3, 0.6..5]
+<!--Exercise-->
+main = do
+    print 2
+<!--Exercise-->
+main = do
+    print (2 * 5)
+    print (* 2 7)
+
+<!--Exercise-->
+main = do
+    print (2 * 5)
+    print ((*) 2 7)
+
+<!--Exercise-->
+main = do
+    print (2.3 * 5)
+    print ((*) 2 7.63)
+
+<!--Exercise-->
+main = do
+    print "Integers have arbitrary precision"
+    print (123 ^ 23)
+    print ((+) 2 7)
+<!--Exercise-->
+main = do
+    print "Integers have arbitrary precision"
+    print (123 ^ 23)
+    print ((+) 2 7)
+<!--Exercise-->
+main = do
+    print 102 + -23
+<!--Exercise-->
+main = do
+    print 102 + (-23)
+    print 102 + -(20 +3)
+<!--Exercise-->
+main = do
+    print True

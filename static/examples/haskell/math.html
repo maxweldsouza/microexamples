@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<meta charset="utf-8">
+<title>micro Examples - Learn programming languages only by reading examples</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Le styles -->
+<link href="../../assets/css/bootstrap.css%3Fv=0.1.css" rel="stylesheet">
+<link href="../../assets/css/scroll.css" rel="stylesheet">
+<style type="text/css">
+body {
+padding-top: 0px;
+padding-bottom: 40px;
+}
+</style>
+<!-- Syntax highlighting -->
+<link rel="stylesheet" href="../../assets/highlight/styles/github.css%3Fv=0.1.css">
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="/assets/js/html5shiv.js"></script>
+<![endif]-->
+<!-- Fav and touch icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:8888/assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:8888/assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:8888/assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="http://localhost:8888/assets/ico/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="http://localhost:8888/assets/ico/favicon.png">
+</head>
+
+<body>
+ <!-- Navbar -->
+<div class="navbar navbar-inverse navbar-static-top" id="top">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="../../index.html">micro<strong>Examples</strong></a>
+</div>
+<div class="nav-collapse">
+<ul class="nav navbar-nav">
+<!-- TODO class="active" -->
+
+<li><a href="../python.html">Python</a></li>
+
+<li><a href="../haskell.html">Haskell</a></li>
+
+<li><a href="../clisp.html">Common Lisp</a></li>
+
+<li><a href="../regex.html">Reg Exp</a></li>
+
+<li><a href="../../course.html">Ten Year Course</a></li>
+</ul>
+</div><!--/.nav-collapse -->
+</div>
+</div>
+
+<div class="container">
+<div class="body-content" id="navigation">
+<!-- Example row of columns -->
+<div class="page-header">
+<h1>Haskell</h1>
+</div>
+<div class="row">
+<div class="col-lg-3">
+<h2>Chapters</h2>
+<ul class="nav nav-pills nav-stacked">
+
+
+<li>
+
+<a href="printing.html">Printing</a></li>
+
+
+<li class="active">
+
+<a href="math.html">Math</a></li>
+
+</ul>
+</div>
+<div class="col-lg-9">
+
+<h2>Example</h2>
+<pre class="haskell"><code>main = do
+    print True &amp;&amp; False
+</code></pre>
+<pre class="no-highlight"><code>
+languages/haskell/math/ex001.hs:2:5:
+    Couldn&#39;t match expected type `Bool&#39; with actual type `IO ()&#39;
+    In the return type of a call of `print&#39;
+    In the first argument of `(&amp;&amp;)&#39;, namely `print True&#39;
+    In a stmt of a &#39;do&#39; block: print True &amp;&amp; False
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>main = do
+    print (True &amp;&amp; False)
+</code></pre>
+<pre class="no-highlight"><code>False
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>main = do
+    print &quot;Equal To&quot;
+    print (10 == 20)
+    print &quot;Not Equal To&quot;
+    print (10 /= 20)
+</code></pre>
+<pre class="no-highlight"><code>&quot;Equal To&quot;
+False
+&quot;Not Equal To&quot;
+True
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>main = do
+    print [6, 5, 4, 3, 2, 1]
+</code></pre>
+<pre class="no-highlight"><code>[6,5,4,3,2,1]
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>main = do
+    print [&quot;aston&quot;, &quot;martin&quot;, &quot;db9&quot;]
+</code></pre>
+<pre class="no-highlight"><code>[&quot;aston&quot;,&quot;martin&quot;,&quot;db9&quot;]
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>main = do
+    print [&quot;aston&quot;, 9, &quot;db9&quot;]
+</code></pre>
+<pre class="no-highlight"><code>
+languages/haskell/math/ex006.hs:2:21:
+    No instance for (Num [Char]) arising from the literal `9&#39;
+    Possible fix: add an instance declaration for (Num [Char])
+    In the expression: 9
+    In the first argument of `print&#39;, namely `[&quot;aston&quot;, 9, &quot;db9&quot;]&#39;
+    In a stmt of a &#39;do&#39; block: print [&quot;aston&quot;, 9, &quot;db9&quot;]
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>main = do
+    print [-5..5]
+</code></pre>
+<pre class="no-highlight"><code>[-5,-4,-3,-2,-1,0,1,2,3,4,5]
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>main = do
+    print [24, 634, -5..5, 354]
+</code></pre>
+<pre class="no-highlight"><code>
+languages/haskell/math/ex008.hs:2:23: parse error on input `..&#39;
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>main = do
+    print [1, 2..10]
+    print [10, 9..1]
+    print [0.3, 0.6..5]
+</code></pre>
+<pre class="no-highlight"><code>[1,2,3,4,5,6,7,8,9,10]
+[10,9,8,7,6,5,4,3,2,1]
+[0.3,0.6,0.8999999999999999,1.1999999999999997,1.4999999999999996,1.7999999999999994,2.099999999999999,2.399999999999999,2.699999999999999,2.9999999999999987,3.2999999999999985,3.5999999999999983,3.899999999999998,4.1999999999999975,4.4999999999999964,4.799999999999995,5.099999999999994]
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>main = do
+    print 2
+</code></pre>
+<pre class="no-highlight"><code>2
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>main = do
+    print (2 * 5)
+    print (* 2 7)
+
+</code></pre>
+<pre class="no-highlight"><code>
+languages/haskell/math/ex011.hs:3:5:
+    No instance for (Show (a0 -&gt; a0)) arising from a use of `print&#39;
+    Possible fix: add an instance declaration for (Show (a0 -&gt; a0))
+    In a stmt of a &#39;do&#39; block: print (* 2 7)
+    In the expression:
+      do { print (2 * 5);
+           print (* 2 7) }
+    In an equation for `main&#39;:
+        main
+          = do { print (2 * 5);
+                 print (* 2 7) }
+
+languages/haskell/math/ex011.hs:3:12:
+    No instance for (Num a0) arising from a use of `*&#39;
+    The type variable `a0&#39; is ambiguous
+    Possible fix: add a type signature that fixes these type variable(s)
+    Note: there are several potential instances:
+      instance Num Double -- Defined in `GHC.Float&#39;
+      instance Num Float -- Defined in `GHC.Float&#39;
+      instance Integral a =&gt; Num (GHC.Real.Ratio a)
+        -- Defined in `GHC.Real&#39;
+      ...plus three others
+    In the first argument of `print&#39;, namely `(* 2 7)&#39;
+    In a stmt of a &#39;do&#39; block: print (* 2 7)
+    In the expression:
+      do { print (2 * 5);
+           print (* 2 7) }
+
+languages/haskell/math/ex011.hs:3:14:
+    No instance for (Num (a1 -&gt; a0)) arising from the literal `2&#39;
+    Possible fix: add an instance declaration for (Num (a1 -&gt; a0))
+    In the expression: 2
+    In the second argument of `(*)&#39;, namely `2 7&#39;
+    In the first argument of `print&#39;, namely `(* 2 7)&#39;
+
+languages/haskell/math/ex011.hs:3:16:
+    No instance for (Num a1) arising from the literal `7&#39;
+    The type variable `a1&#39; is ambiguous
+    Possible fix: add a type signature that fixes these type variable(s)
+    Note: there are several potential instances:
+      instance Num Double -- Defined in `GHC.Float&#39;
+      instance Num Float -- Defined in `GHC.Float&#39;
+      instance Integral a =&gt; Num (GHC.Real.Ratio a)
+        -- Defined in `GHC.Real&#39;
+      ...plus three others
+    In the first argument of `2&#39;, namely `7&#39;
+    In the second argument of `(*)&#39;, namely `2 7&#39;
+    In the first argument of `print&#39;, namely `(* 2 7)&#39;
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>main = do
+    print (2 * 5)
+    print ((*) 2 7)
+
+</code></pre>
+<pre class="no-highlight"><code>10
+14
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>main = do
+    print (2.3 * 5)
+    print ((*) 2 7.63)
+
+</code></pre>
+<pre class="no-highlight"><code>11.5
+15.26
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>main = do
+    print &quot;Integers have arbitrary precision&quot;
+    print (123 ^ 23)
+    print ((+) 2 7)
+</code></pre>
+<pre class="no-highlight"><code>&quot;Integers have arbitrary precision&quot;
+1169008215014432917465348578887506800769541157267
+9
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>main = do
+    print &quot;Integers have arbitrary precision&quot;
+    print (123 ^ 23)
+    print ((+) 2 7)
+</code></pre>
+<pre class="no-highlight"><code>&quot;Integers have arbitrary precision&quot;
+1169008215014432917465348578887506800769541157267
+9
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>main = do
+    print 102 + -23
+</code></pre>
+<pre class="no-highlight"><code>
+languages/haskell/math/ex016.hs:2:5:
+    Precedence parsing error
+        cannot mix `+&#39; [infixl 6] and prefix `-&#39; [infixl 6] in the same infix expression
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>main = do
+    print 102 + (-23)
+    print 102 + -(20 +3)
+</code></pre>
+<pre class="no-highlight"><code>
+languages/haskell/math/ex017.hs:3:5:
+    Precedence parsing error
+        cannot mix `+&#39; [infixl 6] and prefix `-&#39; [infixl 6] in the same infix expression
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>main = do
+    print True
+</code></pre>
+<pre class="no-highlight"><code>True
+</code></pre>
+
+</div>
+</div>
+ <hr>
+<footer>
+<p class="text-right text-muted"><a href="math.html#top">Back to top</a>
+<p class="text-right">&copy; Maxwel D'souza, 2013</p>
+</footer>
+
+</div> <!-- /container -->
+
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- Le javascript
+================================================== -->
+<script src="../../assets/js/jquery.js"></script>
+<script src="../../assets/js/bootstrap.js"></script>
+<!-- Syntax highlighting -->
+<script src="../../assets/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript">
+var currentPopover = 0;
+var popovers = [];
+// Initialize all the popovers to be "manually" displayed.
+popovers.push($("#dropdown").popover({
+trigger: 'manual' ,
+placement : 'bottom',
+title : 'Get Started',
+content : 'Select a language from this drop down menu'
+}));
+// On each button click, hide the currently displayed popover
+// and show the next one.
+$("#dropdown").click(function() {
+if (currentPopover == 1) {
+popovers[0].popover('hide');
+currentPopover = 0;
+}
+}
+$("#pop").click(function() {
+if (currentPopover == 1) {
+popovers[0].popover('hide');
+currentPopover = 0;
+}
+else {
+popovers[0].popover('show');
+currentPopover = 1;
+}
+});
+</script>
+
+</body>
+</html>

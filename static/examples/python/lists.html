@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<meta charset="utf-8">
+<title>micro Examples - Learn programming languages only by reading examples</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Le styles -->
+<link href="../../assets/css/bootstrap.css%3Fv=0.1.css" rel="stylesheet">
+<link href="../../assets/css/scroll.css" rel="stylesheet">
+<style type="text/css">
+body {
+padding-top: 0px;
+padding-bottom: 40px;
+}
+</style>
+<!-- Syntax highlighting -->
+<link rel="stylesheet" href="../../assets/highlight/styles/github.css%3Fv=0.1.css">
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="/assets/js/html5shiv.js"></script>
+<![endif]-->
+<!-- Fav and touch icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:8888/assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:8888/assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:8888/assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="http://localhost:8888/assets/ico/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="http://localhost:8888/assets/ico/favicon.png">
+</head>
+
+<body>
+ <!-- Navbar -->
+<div class="navbar navbar-inverse navbar-static-top" id="top">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="../../index.html">micro<strong>Examples</strong></a>
+</div>
+<div class="nav-collapse">
+<ul class="nav navbar-nav">
+<!-- TODO class="active" -->
+
+<li><a href="../python.html">Python</a></li>
+
+<li><a href="../haskell.html">Haskell</a></li>
+
+<li><a href="../clisp.html">Common Lisp</a></li>
+
+<li><a href="../regex.html">Reg Exp</a></li>
+
+<li><a href="../../course.html">Ten Year Course</a></li>
+</ul>
+</div><!--/.nav-collapse -->
+</div>
+</div>
+
+<div class="container">
+<div class="body-content" id="navigation">
+<!-- Example row of columns -->
+<div class="page-header">
+<h1>Python</h1>
+</div>
+<div class="row">
+<div class="col-lg-3">
+<h2>Chapters</h2>
+<ul class="nav nav-pills nav-stacked">
+
+
+<li>
+
+<a href="printing.html">Printing</a></li>
+
+
+<li>
+
+<a href="comments.html">Comments</a></li>
+
+
+<li>
+
+<a href="math.html">Math</a></li>
+
+
+<li>
+
+<a href="conditionals.html">Conditionals</a></li>
+
+
+<li class="active">
+
+<a href="lists.html">Lists</a></li>
+
+
+<li>
+
+<a href="dictionaries.html">Dictionaries</a></li>
+
+
+<li>
+
+<a href="trees.html">Trees</a></li>
+
+
+<li>
+
+<a href="loops.html">Loops</a></li>
+
+
+<li>
+
+<a href="functions.html">Functions</a></li>
+
+
+<li>
+
+<a href="classes.html">Classes</a></li>
+
+</ul>
+</div>
+<div class="col-lg-9">
+
+<h2>Example</h2>
+<pre class="python"><code>cars = [&#39;ariel atom&#39;, &#39;ferrari f430&#39;, &#39;aston martin db9&#39;]
+print cars
+</code></pre>
+<pre class="no-highlight"><code>[&#39;ariel atom&#39;, &#39;ferrari f430&#39;, &#39;aston martin db9&#39;]
+</code></pre>
+
+<h2>Example</h2>
+<pre class="python"><code>items = [&#39;nexus 7&#39;, 13, 198.3856, &#39;rocketship&#39;]
+print items
+</code></pre>
+<pre class="no-highlight"><code>[&#39;nexus 7&#39;, 13, 198.3856, &#39;rocketship&#39;]
+</code></pre>
+
+<h2>Example</h2>
+<pre class="python"><code>humbug = [&#39;homeopathy&#39;, &#39;magnet therapy&#39;, &#39;reiki&#39;]
+print humbug[3]
+</code></pre>
+<pre class="no-highlight"><code>Traceback (most recent call last):
+  File &quot;languages/python/lists/ex003.py&quot;, line 2, in &lt;module&gt;
+    print humbug[3]
+IndexError: list index out of range
+</code></pre>
+
+<h2>Example</h2>
+<pre class="python"><code>#array indices start with 0
+humbug = [&#39;homeopathy&#39;, &#39;magnet therapy&#39;, &#39;reiki&#39;]
+print humbug[2]
+</code></pre>
+<pre class="no-highlight"><code>reiki
+</code></pre>
+
+<h2>Example</h2>
+<pre class="python"><code>humbug = [&#39;homeopathy&#39;, &#39;magnet therapy&#39;, &#39;reiki&#39;]
+humbug.append(&#39;astrology&#39;)
+print humbug
+</code></pre>
+<pre class="no-highlight"><code>[&#39;homeopathy&#39;, &#39;magnet therapy&#39;, &#39;reiki&#39;, &#39;astrology&#39;]
+</code></pre>
+
+<h2>Example</h2>
+<pre class="python"><code>list = [&#39;one&#39;, &#39;two&#39;, &#39;three&#39;, &#39;four&#39;, &#39;five&#39;, &#39;six&#39;, &#39;seven&#39;]
+print list[-1]
+print list[-2]
+print list[-3]
+</code></pre>
+<pre class="no-highlight"><code>seven
+six
+five
+</code></pre>
+
+</div>
+</div>
+ <hr>
+<footer>
+<p class="text-right text-muted"><a href="lists.html#top">Back to top</a>
+<p class="text-right">&copy; Maxwel D'souza, 2013</p>
+</footer>
+
+</div> <!-- /container -->
+
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- Le javascript
+================================================== -->
+<script src="../../assets/js/jquery.js"></script>
+<script src="../../assets/js/bootstrap.js"></script>
+<!-- Syntax highlighting -->
+<script src="../../assets/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript">
+var currentPopover = 0;
+var popovers = [];
+// Initialize all the popovers to be "manually" displayed.
+popovers.push($("#dropdown").popover({
+trigger: 'manual' ,
+placement : 'bottom',
+title : 'Get Started',
+content : 'Select a language from this drop down menu'
+}));
+// On each button click, hide the currently displayed popover
+// and show the next one.
+$("#dropdown").click(function() {
+if (currentPopover == 1) {
+popovers[0].popover('hide');
+currentPopover = 0;
+}
+}
+$("#pop").click(function() {
+if (currentPopover == 1) {
+popovers[0].popover('hide');
+currentPopover = 0;
+}
+else {
+popovers[0].popover('show');
+currentPopover = 1;
+}
+});
+</script>
+
+</body>
+</html>
