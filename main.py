@@ -14,10 +14,11 @@ class ExampleHandler(tornado.web.RequestHandler):
         if chapter == "":
             chapter = chapters[0]
         exs = examples.exercise(language, chapter)
+        highlight = highlights[folders.index(language)]
         self.render("examples.html", folder=language, folders=folders,
                 chapters=chapters, chapter=chapter,
                 titles=titles, title=titles[folders.index(language)],
-                exercises=exs, highlights=highlights)
+                exercises=exs, highlight=highlight)
 
 class FaqHandler(tornado.web.RequestHandler):
     def get(self):

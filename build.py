@@ -1,5 +1,8 @@
 #TODO Rename files
+#TODO Redo Homepage
+#TODO Transfer to github pages
 #TODO Add licence
+#TODO Change theme
 
 #TODO Active highlight navigation bar
 #TODO C compilation

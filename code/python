@@ -124,6 +124,19 @@ print list[-3]
 <!--Chapter=dictionaries-->
 <!--Chapter=trees-->
 <!--Chapter=loops-->
+<!--Exercise-->
+for i in range(3):
+    print i
+<!--Exercise-->
+#Indentation matters
+for i in range(3):
+print i
+<!--Exercise-->
+for i in [1, 2, 3]:
+    print i
+<!--Exercise-->
+for i in ['one', 'two', 'three']:
+    print i
 <!--Chapter=functions-->
 <!--Exercise-->
 def SaySomething():
