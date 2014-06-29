@@ -1,8 +1,9 @@
+#TODO Dry homepage
 #TODO Rename files
-#TODO Redo Homepage
 #TODO Transfer to github pages
 #TODO Add licence
 #TODO Change theme
+#TODO Minify
 
 #TODO Active highlight navigation bar
 #TODO C compilation
@@ -10,7 +11,6 @@
 #TODO Add search feature
 #TODO Social bookmarking
 #TODO Goto next chapter
-#TODO Improve performance
 #TODO Add google analytics
 #TODO Change title based on page
 #TODO Reformat code
