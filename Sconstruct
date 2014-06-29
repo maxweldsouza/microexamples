@@ -68,8 +68,8 @@ def buildLang(dir, ext, lang):
 
 buildLang('languages/python', '.py', 'python')
 buildLang('languages/clisp', '.lisp', 'clisp')
-buildLang('languages/clojure', '.clj', 'clojure')
+#buildLang('languages/clojure', '.clj', 'clojure')
 buildLang('languages/haskell', '.hs', 'haskell')
 buildLang('languages/regex', '.py', 'regex')
-buildLang('languages/ruby', '.rb', 'ruby')
-buildLang('languages/javascript', '.js', 'javascript')
+#buildLang('languages/ruby', '.rb', 'ruby')
+#buildLang('languages/javascript', '.js', 'javascript')
