@@ -1,7 +1,7 @@
 microexamples
 =============
 
-[microexamples.com(microexamples.com)] is a site to learn code just by reading examples
+[microexamples.com](http://www.microexamples.com) is a site to learn code just by reading examples
 It is hosted on Github pages.
 
 ##Requirements
