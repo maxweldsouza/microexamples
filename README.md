@@ -5,19 +5,19 @@ microexamples
 It is hosted on Github pages.
 
 ##Requirements
-*sconstruct
-*python
-*common lisp
-*ghc
-*tornado
+* sconstruct
+* python
+* common lisp
+* ghc
+* tornado
 
 The text files in the "code" folder have input code for examples. The output is generated automatically and compiled to static html pages.
 
 ##Markup
-*For chapter names write <!--Chapter=Your Chapter Name-->
-*For examples write <!--Exercise-->
-*Markup should be on a separate line.
-*Dont leave blank lines before or after the markup.
+* For chapter names write <!--Chapter=Your Chapter Name-->
+* For examples write <!--Exercise-->
+* Markup should be on a separate line.
+* Dont leave blank lines before or after the markup.
 
 ##Branch for Static pages
 The gh-pages branch has the static pages for the site.
