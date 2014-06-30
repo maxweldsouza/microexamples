@@ -4,8 +4,6 @@ microexamples
 (microexamples.com) is a site to learn code just by reading examples
 It is hosted on Github pages.
 
-#Contributing
-
 ##Requirements
 sconstruct
 python
@@ -17,14 +15,16 @@ The text files in the "code" folder have input code for examples. The output is 
 
 ##Markup
 For chapter names write <!--Chapter=Your Chapter Name-->
+
 For examples write <!--Exercise-->
-Write this on separate lines.
+
+Markup should be on a separate line.
+
 Dont leave blank lines before or after the markup.
 
 ##Branch for Static pages
 The gh-pages branch has the static pages for the site.
 
-## Build
 ###To clean temporary files
 scons -c
 
