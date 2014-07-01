@@ -26,7 +26,7 @@ class FaqHandler(tornado.web.RequestHandler):
 
 class CourseHandler(tornado.web.RequestHandler):
     def get(self):
-        self.render("course.html", folders=folders, titles=titles)
+        self.render("library.html", folders=folders, titles=titles)
 
 settings = {
     "static_path": os.path.join(os.path.dirname(__file__), "assets"),
@@ -38,7 +38,7 @@ application = tornado.web.Application([
     (r"/examples/(.*)/(.*)", ExampleHandler),
     (r"/examples/(.*)", ExampleHandler),
     (r"/faq.html", FaqHandler),
-    (r"/course.html", CourseHandler),
+    (r"/library.html", CourseHandler),
     ], **settings)
 
 if __name__ == "__main__":
