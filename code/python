@@ -31,7 +31,7 @@ print "These are double quotes \" "
 print 99
 print 3.14
 <!--Exercise-->
-print "%s and %s" % "penn", "teller"
+print "%s and %s" % ("penn", "teller")
 <!--Exercise-->
 print "You must read %s" % "Hackers and Painters"
 print "by %s" % "Paul Graham"
@@ -41,60 +41,100 @@ print "There are %d cards in a deck" % 52
 print "Avogadros No: %e" % 6.023e23
 print "Avogadros No: %f" % 6.023e23
 <!--Exercise-->
-print "%e" % 0.0002
-print "%f" % 0.0002
-<!--Exercise-->
-a = 59
-print a
-<!--Exercise-->
 a = 10.123456
 print a
 print "a is :", a
 print "a is %d" % a
 print "a is %e" % a
+<!--Exercise-->
+a = 37
+b = 41
+print a
 <!--Chapter=comments-->
 <!--Exercise-->
 print "This is code" #and this is a comment
 #print "This code is disabled"
 
 #This is another comment
+<!--Exercise-->
+#Dont use this for comments
+#Its better used for documentation
+"""This is a 
+multiline
+comment"""
+<!--Exercise-->
+"""This wont execute
+print 23 + 91
+"""
+print "nothing happens"
 <!--Chapter=math-->
 <!--Exercise-->
-topSpeedMph = 260
-topSpeed = topSpeedMph * 1.60934
-print 'the bugatti veyron\'s top speed is %d kmph' % topSpeed
+print 2 + 3
+print 5 - 7
+print 11 * 13
+print 12 / 4
 <!--Exercise-->
-topSpeed = 260 #mph
-mpg = 3 #mpg
-tank = 26 #gallons
-time = topSpeed / mpg / tank * 60
-print 'the veyron will empty its tank in %f mins at top speed' % time
+#division rounds off the quotient
+print 3 / 2
+print 1 / 2
+<!--Exercise-->
+print 3 / 2.0
+print 1 / 2.0
+print 3.0 / 2
+print 1.0 / 2
+<!--Exercise-->
+print (2 + 3) * 5 - 8
+<!--Exercise-->
+print 21 + 34 == 55
+print (11 * 13) == (17 + 2)
+print (11 * 13) < (17 + 2)
+print (11 * 13) > (17 + 2)
+print (11 * 13) <= (17 + 2)
+print (11 * 13) >= (17 + 2)
 <!--Exercise-->
 a = 3
 cube = a * a * a
 print a
 <!--Exercise-->
-print (3 + 5) * 5 - 3
+# power
+print 2 ** 2 
+print 3 ** 2 
+print 4 ** 2 
 <!--Exercise-->
-print (5 * 6) <= 28 + 2
+print 2 ** 3 
+print 3 ** 3 
+print 4 ** 3 
+<!--Chapter=strings-->
+<!--Exercise-->
+fatherOfCs =  "Alan" + " Turing"
+print fatherOfCs
+<!--Exercise-->
+fiveBananas = "banana-" * 5
+print fiveBananas
+<!--Exercise-->
+fiveBananas = 5 * "banana-"
+print fiveBananas
 <!--Chapter=conditionals-->
-<!--Exercise-->
-a = 12
-if a > 10
-    print "a is greater than 10"
-<!--Exercise-->
-a = 12
-if a > 10:
-    print "a is greater than 10"
 <!--Exercise-->
 a = 12
 if a > 10:
 print "a is greater than 10"
 <!--Exercise-->
+a = 12
+if a > 10
+    print "a is greater than 10"
+<!--Exercise-->
+#use four spaces for indentation
+#the colon is required
+a = 12
+if a > 10:
+    print "a is greater than 10"
+<!--Exercise-->
 day = "sunday"
 if day = "sunday":
     print "take a nap"
 <!--Exercise-->
+# == is for comparison
 day = "sunday"
 if day == "sunday":
     print "take a nap"
@@ -121,8 +161,6 @@ list = ['one', 'two', 'three', 'four', 'five', 'six', 'seven']
 print list[-1]
 print list[-2]
 print list[-3]
-<!--Chapter=dictionaries-->
-<!--Chapter=trees-->
 <!--Chapter=loops-->
 <!--Exercise-->
 for i in range(3):
@@ -167,4 +205,3 @@ def Cube(a):
         return b * b
     return a * Square(a)
 print Cube(3)
-<!--Chapter=classes-->
