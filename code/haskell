@@ -104,6 +104,26 @@ main = do
     print (sumOfSquares 3 4)
 <!--Chapter=more functions-->
 <!--Exercise-->
+howBig n
+    | n > 1000 = "huge"
+    | n > 100  = "big"
+    | n > 10   = "small"
+    | n > 1    = "tiny"
+    | otherwise = "dont know"
+main = do
+    print (howBig 235)
+<!--Exercise-->
+-- order matters, only the first 
+-- satisfying condition is executed
+howBig n
+    | n > 1    = "tiny"
+    | n > 10   = "small"
+    | n > 100  = "big"
+    | n > 1000 = "huge"
+    | otherwise = "dont know"
+main = do
+    print (howBig 235)
+<!--Exercise-->
 factorial n
     | n == 0 = 1
     | n /= 0 = n * factorial (n - 1)
