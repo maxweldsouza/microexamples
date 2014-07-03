@@ -54,7 +54,7 @@ padding-bottom: 40px;
 
 <li><a href="../regex.html">Reg Exp</a></li>
 
-<li><a href="../../course.html">Ten Year Course</a></li>
+<li><a href="../../library.html">Library</a></li>
 </ul>
 </div><!--/.nav-collapse -->
 </div>
@@ -87,6 +87,11 @@ padding-bottom: 40px;
 <a href="math.html">Math</a></li>
 
 
+<li>
+
+<a href="strings.html">Strings</a></li>
+
+
 <li class="active">
 
 <a href="conditionals.html">Conditionals</a></li>
@@ -99,16 +104,6 @@ padding-bottom: 40px;
 
 <li>
 
-<a href="dictionaries.html">Dictionaries</a></li>
-
-
-<li>
-
-<a href="trees.html">Trees</a></li>
-
-
-<li>
-
 <a href="loops.html">Loops</a></li>
 
 
@@ -116,43 +111,40 @@ padding-bottom: 40px;
 
 <a href="functions.html">Functions</a></li>
 
-
-<li>
-
-<a href="classes.html">Classes</a></li>
-
 </ul>
 </div>
 <div class="col-lg-9">
 
 <h2>Example</h2>
 <pre class="python"><code>a = 12
+if a &gt; 10:
+print &quot;a is greater than 10&quot;
+</code></pre>
+<pre class="no-highlight"><code>  File &quot;languages/python/conditionals/ex001.py&quot;, line 3
+    print &quot;a is greater than 10&quot;
+        ^
+IndentationError: expected an indented block
+</code></pre>
+
+<h2>Example</h2>
+<pre class="python"><code>a = 12
 if a &gt; 10
     print &quot;a is greater than 10&quot;
 </code></pre>
-<pre class="no-highlight"><code>  File &quot;languages/python/conditionals/ex001.py&quot;, line 2
+<pre class="no-highlight"><code>  File &quot;languages/python/conditionals/ex002.py&quot;, line 2
     if a &gt; 10
             ^
 SyntaxError: invalid syntax
 </code></pre>
 
 <h2>Example</h2>
-<pre class="python"><code>a = 12
+<pre class="python"><code>#use four spaces for indentation
+#the colon is required
+a = 12
 if a &gt; 10:
     print &quot;a is greater than 10&quot;
 </code></pre>
 <pre class="no-highlight"><code>a is greater than 10
-</code></pre>
-
-<h2>Example</h2>
-<pre class="python"><code>a = 12
-if a &gt; 10:
-print &quot;a is greater than 10&quot;
-</code></pre>
-<pre class="no-highlight"><code>  File &quot;languages/python/conditionals/ex003.py&quot;, line 3
-    print &quot;a is greater than 10&quot;
-        ^
-IndentationError: expected an indented block
 </code></pre>
 
 <h2>Example</h2>
@@ -167,7 +159,8 @@ SyntaxError: invalid syntax
 </code></pre>
 
 <h2>Example</h2>
-<pre class="python"><code>day = &quot;sunday&quot;
+<pre class="python"><code># == is for comparison
+day = &quot;sunday&quot;
 if day == &quot;sunday&quot;:
     print &quot;take a nap&quot;
 </code></pre>
@@ -220,6 +213,14 @@ popovers[0].popover('show');
 currentPopover = 1;
 }
 });
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-52508387-1', 'auto');
+ga('send', 'pageview');
 </script>
 
 </body>

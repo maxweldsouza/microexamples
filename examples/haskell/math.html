@@ -54,7 +54,7 @@ padding-bottom: 40px;
 
 <li><a href="../regex.html">Reg Exp</a></li>
 
-<li><a href="../../course.html">Ten Year Course</a></li>
+<li><a href="../../library.html">Library</a></li>
 </ul>
 </div><!--/.nav-collapse -->
 </div>
@@ -77,9 +77,29 @@ padding-bottom: 40px;
 <a href="printing.html">Printing</a></li>
 
 
+<li>
+
+<a href="comments.html">Comments</a></li>
+
+
 <li class="active">
 
 <a href="math.html">Math</a></li>
+
+
+<li>
+
+<a href="functions.html">Functions</a></li>
+
+
+<li>
+
+<a href="more&#32;functions.html">More Functions</a></li>
+
+
+<li>
+
+<a href="other.html">Other</a></li>
 
 </ul>
 </div>
@@ -87,221 +107,64 @@ padding-bottom: 40px;
 
 <h2>Example</h2>
 <pre class="haskell"><code>main = do
-    print True &amp;&amp; False
+    print 7
+</code></pre>
+<pre class="no-highlight"><code>7
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>main = do
+    print 7 + 11
 </code></pre>
 <pre class="no-highlight"><code>
-languages/haskell/math/ex001.hs:2:5:
-    Couldn&#39;t match expected type `Bool&#39; with actual type `IO ()&#39;
-    In the return type of a call of `print&#39;
-    In the first argument of `(&amp;&amp;)&#39;, namely `print True&#39;
-    In a stmt of a &#39;do&#39; block: print True &amp;&amp; False
+languages/haskell/math/ex002.hs:2:13:
+    No instance for (Num (IO ())) arising from a use of `+&#39;
+    Possible fix: add an instance declaration for (Num (IO ()))
+    In a stmt of a &#39;do&#39; block: print 7 + 11
+    In the expression: do { print 7 + 11 }
+    In an equation for `main&#39;: main = do { print 7 + 11 }
 </code></pre>
 
 <h2>Example</h2>
 <pre class="haskell"><code>main = do
-    print (True &amp;&amp; False)
+    print (7 + 11)
 </code></pre>
-<pre class="no-highlight"><code>False
-</code></pre>
-
-<h2>Example</h2>
-<pre class="haskell"><code>main = do
-    print &quot;Equal To&quot;
-    print (10 == 20)
-    print &quot;Not Equal To&quot;
-    print (10 /= 20)
-</code></pre>
-<pre class="no-highlight"><code>&quot;Equal To&quot;
-False
-&quot;Not Equal To&quot;
-True
+<pre class="no-highlight"><code>18
 </code></pre>
 
 <h2>Example</h2>
 <pre class="haskell"><code>main = do
-    print [6, 5, 4, 3, 2, 1]
+    print (7 - 11)
 </code></pre>
-<pre class="no-highlight"><code>[6,5,4,3,2,1]
+<pre class="no-highlight"><code>-4
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>-- haskell is smart
+main = do
+    print (3 / 2)
+</code></pre>
+<pre class="no-highlight"><code>1.5
 </code></pre>
 
 <h2>Example</h2>
 <pre class="haskell"><code>main = do
-    print [&quot;aston&quot;, &quot;martin&quot;, &quot;db9&quot;]
-</code></pre>
-<pre class="no-highlight"><code>[&quot;aston&quot;,&quot;martin&quot;,&quot;db9&quot;]
-</code></pre>
-
-<h2>Example</h2>
-<pre class="haskell"><code>main = do
-    print [&quot;aston&quot;, 9, &quot;db9&quot;]
+    print (3 * 4) + 11
 </code></pre>
 <pre class="no-highlight"><code>
-languages/haskell/math/ex006.hs:2:21:
-    No instance for (Num [Char]) arising from the literal `9&#39;
-    Possible fix: add an instance declaration for (Num [Char])
-    In the expression: 9
-    In the first argument of `print&#39;, namely `[&quot;aston&quot;, 9, &quot;db9&quot;]&#39;
-    In a stmt of a &#39;do&#39; block: print [&quot;aston&quot;, 9, &quot;db9&quot;]
+languages/haskell/math/ex006.hs:2:19:
+    No instance for (Num (IO ())) arising from a use of `+&#39;
+    Possible fix: add an instance declaration for (Num (IO ()))
+    In a stmt of a &#39;do&#39; block: print (3 * 4) + 11
+    In the expression: do { print (3 * 4) + 11 }
+    In an equation for `main&#39;: main = do { print (3 * 4) + 11 }
 </code></pre>
 
 <h2>Example</h2>
 <pre class="haskell"><code>main = do
-    print [-5..5]
+    print ((3 * 4) + 11)
 </code></pre>
-<pre class="no-highlight"><code>[-5,-4,-3,-2,-1,0,1,2,3,4,5]
-</code></pre>
-
-<h2>Example</h2>
-<pre class="haskell"><code>main = do
-    print [24, 634, -5..5, 354]
-</code></pre>
-<pre class="no-highlight"><code>
-languages/haskell/math/ex008.hs:2:23: parse error on input `..&#39;
-</code></pre>
-
-<h2>Example</h2>
-<pre class="haskell"><code>main = do
-    print [1, 2..10]
-    print [10, 9..1]
-    print [0.3, 0.6..5]
-</code></pre>
-<pre class="no-highlight"><code>[1,2,3,4,5,6,7,8,9,10]
-[10,9,8,7,6,5,4,3,2,1]
-[0.3,0.6,0.8999999999999999,1.1999999999999997,1.4999999999999996,1.7999999999999994,2.099999999999999,2.399999999999999,2.699999999999999,2.9999999999999987,3.2999999999999985,3.5999999999999983,3.899999999999998,4.1999999999999975,4.4999999999999964,4.799999999999995,5.099999999999994]
-</code></pre>
-
-<h2>Example</h2>
-<pre class="haskell"><code>main = do
-    print 2
-</code></pre>
-<pre class="no-highlight"><code>2
-</code></pre>
-
-<h2>Example</h2>
-<pre class="haskell"><code>main = do
-    print (2 * 5)
-    print (* 2 7)
-
-</code></pre>
-<pre class="no-highlight"><code>
-languages/haskell/math/ex011.hs:3:5:
-    No instance for (Show (a0 -&gt; a0)) arising from a use of `print&#39;
-    Possible fix: add an instance declaration for (Show (a0 -&gt; a0))
-    In a stmt of a &#39;do&#39; block: print (* 2 7)
-    In the expression:
-      do { print (2 * 5);
-           print (* 2 7) }
-    In an equation for `main&#39;:
-        main
-          = do { print (2 * 5);
-                 print (* 2 7) }
-
-languages/haskell/math/ex011.hs:3:12:
-    No instance for (Num a0) arising from a use of `*&#39;
-    The type variable `a0&#39; is ambiguous
-    Possible fix: add a type signature that fixes these type variable(s)
-    Note: there are several potential instances:
-      instance Num Double -- Defined in `GHC.Float&#39;
-      instance Num Float -- Defined in `GHC.Float&#39;
-      instance Integral a =&gt; Num (GHC.Real.Ratio a)
-        -- Defined in `GHC.Real&#39;
-      ...plus three others
-    In the first argument of `print&#39;, namely `(* 2 7)&#39;
-    In a stmt of a &#39;do&#39; block: print (* 2 7)
-    In the expression:
-      do { print (2 * 5);
-           print (* 2 7) }
-
-languages/haskell/math/ex011.hs:3:14:
-    No instance for (Num (a1 -&gt; a0)) arising from the literal `2&#39;
-    Possible fix: add an instance declaration for (Num (a1 -&gt; a0))
-    In the expression: 2
-    In the second argument of `(*)&#39;, namely `2 7&#39;
-    In the first argument of `print&#39;, namely `(* 2 7)&#39;
-
-languages/haskell/math/ex011.hs:3:16:
-    No instance for (Num a1) arising from the literal `7&#39;
-    The type variable `a1&#39; is ambiguous
-    Possible fix: add a type signature that fixes these type variable(s)
-    Note: there are several potential instances:
-      instance Num Double -- Defined in `GHC.Float&#39;
-      instance Num Float -- Defined in `GHC.Float&#39;
-      instance Integral a =&gt; Num (GHC.Real.Ratio a)
-        -- Defined in `GHC.Real&#39;
-      ...plus three others
-    In the first argument of `2&#39;, namely `7&#39;
-    In the second argument of `(*)&#39;, namely `2 7&#39;
-    In the first argument of `print&#39;, namely `(* 2 7)&#39;
-</code></pre>
-
-<h2>Example</h2>
-<pre class="haskell"><code>main = do
-    print (2 * 5)
-    print ((*) 2 7)
-
-</code></pre>
-<pre class="no-highlight"><code>10
-14
-</code></pre>
-
-<h2>Example</h2>
-<pre class="haskell"><code>main = do
-    print (2.3 * 5)
-    print ((*) 2 7.63)
-
-</code></pre>
-<pre class="no-highlight"><code>11.5
-15.26
-</code></pre>
-
-<h2>Example</h2>
-<pre class="haskell"><code>main = do
-    print &quot;Integers have arbitrary precision&quot;
-    print (123 ^ 23)
-    print ((+) 2 7)
-</code></pre>
-<pre class="no-highlight"><code>&quot;Integers have arbitrary precision&quot;
-1169008215014432917465348578887506800769541157267
-9
-</code></pre>
-
-<h2>Example</h2>
-<pre class="haskell"><code>main = do
-    print &quot;Integers have arbitrary precision&quot;
-    print (123 ^ 23)
-    print ((+) 2 7)
-</code></pre>
-<pre class="no-highlight"><code>&quot;Integers have arbitrary precision&quot;
-1169008215014432917465348578887506800769541157267
-9
-</code></pre>
-
-<h2>Example</h2>
-<pre class="haskell"><code>main = do
-    print 102 + -23
-</code></pre>
-<pre class="no-highlight"><code>
-languages/haskell/math/ex016.hs:2:5:
-    Precedence parsing error
-        cannot mix `+&#39; [infixl 6] and prefix `-&#39; [infixl 6] in the same infix expression
-</code></pre>
-
-<h2>Example</h2>
-<pre class="haskell"><code>main = do
-    print 102 + (-23)
-    print 102 + -(20 +3)
-</code></pre>
-<pre class="no-highlight"><code>
-languages/haskell/math/ex017.hs:3:5:
-    Precedence parsing error
-        cannot mix `+&#39; [infixl 6] and prefix `-&#39; [infixl 6] in the same infix expression
-</code></pre>
-
-<h2>Example</h2>
-<pre class="haskell"><code>main = do
-    print True
-</code></pre>
-<pre class="no-highlight"><code>True
+<pre class="no-highlight"><code>23
 </code></pre>
 
 </div>
@@ -350,6 +213,14 @@ popovers[0].popover('show');
 currentPopover = 1;
 }
 });
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-52508387-1', 'auto');
+ga('send', 'pageview');
 </script>
 
 </body>

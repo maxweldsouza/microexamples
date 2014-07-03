@@ -64,7 +64,7 @@ padding-bottom: 40px;
 <div class="body-content" id="navigation">
 <!-- Example row of columns -->
 <div class="page-header">
-<h1>Common Lisp</h1>
+<h1>Haskell</h1>
 </div>
 <div class="row">
 <div class="col-lg-3">
@@ -72,9 +72,14 @@ padding-bottom: 40px;
 <ul class="nav nav-pills nav-stacked">
 
 
-<li class="active">
+<li>
 
 <a href="printing.html">Printing</a></li>
+
+
+<li>
+
+<a href="comments.html">Comments</a></li>
 
 
 <li>
@@ -82,34 +87,177 @@ padding-bottom: 40px;
 <a href="math.html">Math</a></li>
 
 
+<li class="active">
+
+<a href="functions.html">Functions</a></li>
+
+
 <li>
 
-<a href="lists.html">Lists</a></li>
+<a href="more&#32;functions.html">More Functions</a></li>
+
+
+<li>
+
+<a href="other.html">Other</a></li>
 
 </ul>
 </div>
 <div class="col-lg-9">
 
 <h2>Example</h2>
-<pre class="clisp"><code>(print &quot;Hello World&quot;)
+<pre class="haskell"><code>-- defining a function
+mphToKph x = x * 1.61
+main = do
+    -- calling it
+    print mphToKph 100
 </code></pre>
 <pre class="no-highlight"><code>
-&quot;Hello World&quot; 
+languages/haskell/functions/ex001.hs:5:5:
+    Couldn&#39;t match expected type `a1 -&gt; t0&#39; with actual type `IO ()&#39;
+    The function `print&#39; is applied to two arguments,
+    but its type `(a0 -&gt; a0) -&gt; IO ()&#39; has only one
+    In a stmt of a &#39;do&#39; block: print mphToKph 100
+    In the expression: do { print mphToKph 100 }
 </code></pre>
 
 <h2>Example</h2>
-<pre class="clisp"><code>(print &quot;Hello World&quot;) ;This is a comment
-;comments are made with semicolons
+<pre class="haskell"><code>mphToKph x = x * 1.61
+main = do
+    -- you need to group stuff
+    -- or haskell will get confused
+    print (mphToKph 100)
+</code></pre>
+<pre class="no-highlight"><code>161.0
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>mphToKph x = x * 1.61
+kphToMph x = x / 1.61 --havent called it yet
+main = do
+    print (mphToKph 100)
+</code></pre>
+<pre class="no-highlight"><code>161.0
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>mphToKph x = x * 1.61
+kphToMph x = x / 1.61
+main = do
+    print (kphToMph 100)
+</code></pre>
+<pre class="no-highlight"><code>62.11180124223602
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>-- you can replace x with anything
+kphToMph y = y / 1.61
+main = do
+    print (kphToMph 100)
+</code></pre>
+<pre class="no-highlight"><code>62.11180124223602
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>-- you can replace x with anything
+-- even James May
+kphToMph jamesMay = jamesMay / 1.61
+main = do
+    print (kphToMph 100)
+</code></pre>
+<pre class="no-highlight"><code>62.11180124223602
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>-- just dont use a capital first letter
+kphToMph JamesMay = JamesMay / 1.61
+main = do
+    print (kphToMph 100)
 </code></pre>
 <pre class="no-highlight"><code>
-&quot;Hello World&quot; 
+languages/haskell/functions/ex007.hs:2:10:
+    Not in scope: data constructor `JamesMay&#39;
+
+languages/haskell/functions/ex007.hs:2:21:
+    Not in scope: data constructor `JamesMay&#39;
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>-- even this wont work
+kphToMph Y = Y / 1.61
+main = do
+    print (kphToMph 100)
+</code></pre>
+<pre class="no-highlight"><code>
+languages/haskell/functions/ex008.hs:2:10:
+    Not in scope: data constructor `Y&#39;
+
+languages/haskell/functions/ex008.hs:2:14:
+    Not in scope: data constructor `Y&#39;
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>-- even this wont work
+KphToMph y = y / 1.61
+main = do
+    print (KphToMph 100)
+</code></pre>
+<pre class="no-highlight"><code>
+languages/haskell/functions/ex009.hs:2:1:
+    Not in scope: data constructor `KphToMph&#39;
+
+languages/haskell/functions/ex009.hs:4:12:
+    Not in scope: data constructor `KphToMph&#39;
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>-- even this wont work
+KphToMph y = y / 1.61
+main = do
+    print (KphToMph 100)
+</code></pre>
+<pre class="no-highlight"><code>
+languages/haskell/functions/ex010.hs:2:1:
+    Not in scope: data constructor `KphToMph&#39;
+
+languages/haskell/functions/ex010.hs:4:12:
+    Not in scope: data constructor `KphToMph&#39;
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>square x = x * x
+sumOfSquares x y = square x + square y
+main = do
+    print (sumOfSquares 3 4)
+</code></pre>
+<pre class="no-highlight"><code>25
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>-- order doesnt matter
+sumOfSquares x y = square x + square y
+square x = x * x
+main = do
+    print (sumOfSquares 3 4)
+</code></pre>
+<pre class="no-highlight"><code>25
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>-- order doesnt matter
+sumOfSquares x y = square x + square y
+square x = x * x
+main = do
+    print (sumOfSquares 3 4)
+</code></pre>
+<pre class="no-highlight"><code>25
 </code></pre>
 
 </div>
 </div>
  <hr>
 <footer>
-<p class="text-right text-muted"><a href="printing.html#top">Back to top</a>
+<p class="text-right text-muted"><a href="functions.html#top">Back to top</a>
 <p class="text-right">&copy; Maxwel D'souza, 2013</p>
 </footer>
 
