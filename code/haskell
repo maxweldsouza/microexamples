@@ -1,10 +1,133 @@
 <!--Chapter=printing-->
 <!--Exercise-->
-putStrLn "Hello World"
+print "Hello World"
 <!--Exercise-->
 main = do
-    putStrLn "Hello World"
+    print "Hello World"
+<!--Chapter=comments-->
+<!--Exercise-->
+main = do
+-- This is a comment
+    print "Comments use --"
+<!--Exercise-->
+-- This is a comment
+main = do
+-- This is another comment
+    print "Comments use --" -- So is this
 <!--Chapter=math-->
+<!--Exercise-->
+main = do
+    print 7
+<!--Exercise-->
+main = do
+    print 7 + 11
+<!--Exercise-->
+main = do
+    print (7 + 11)
+<!--Exercise-->
+main = do
+    print (7 - 11)
+<!--Exercise-->
+-- haskell is smart
+main = do
+    print (3 / 2)
+<!--Exercise-->
+main = do
+    print (3 * 4) + 11
+<!--Exercise-->
+main = do
+    print ((3 * 4) + 11)
+<!--Chapter=functions-->
+<!--Exercise-->
+-- defining a function
+mphToKph x = x * 1.61
+main = do
+    -- calling it
+    print mphToKph 100
+<!--Exercise-->
+mphToKph x = x * 1.61
+main = do
+    -- you need to group stuff
+    -- or haskell will get confused
+    print (mphToKph 100)
+<!--Exercise-->
+mphToKph x = x * 1.61
+kphToMph x = x / 1.61 --havent called it yet
+main = do
+    print (mphToKph 100)
+<!--Exercise-->
+mphToKph x = x * 1.61
+kphToMph x = x / 1.61
+main = do
+    print (kphToMph 100)
+<!--Exercise-->
+-- you can replace x with anything
+kphToMph y = y / 1.61
+main = do
+    print (kphToMph 100)
+<!--Exercise-->
+-- you can replace x with anything
+-- even James May
+kphToMph jamesMay = jamesMay / 1.61
+main = do
+    print (kphToMph 100)
+<!--Exercise-->
+-- just dont use a capital first letter
+kphToMph JamesMay = JamesMay / 1.61
+main = do
+    print (kphToMph 100)
+<!--Exercise-->
+-- even this wont work
+kphToMph Y = Y / 1.61
+main = do
+    print (kphToMph 100)
+<!--Exercise-->
+-- even this wont work
+KphToMph y = y / 1.61
+main = do
+    print (KphToMph 100)
+<!--Exercise-->
+-- even this wont work
+KphToMph y = y / 1.61
+main = do
+    print (KphToMph 100)
+<!--Exercise-->
+square x = x * x
+sumOfSquares x y = square x + square y
+main = do
+    print (sumOfSquares 3 4)
+<!--Exercise-->
+-- order doesnt matter
+sumOfSquares x y = square x + square y
+square x = x * x
+main = do
+    print (sumOfSquares 3 4)
+<!--Chapter=more functions-->
+<!--Exercise-->
+factorial n
+    | n == 0 = 1
+    | n /= 0 = n * factorial (n - 1)
+main = do
+    print (factorial 5)
+<!--Exercise-->
+factorial n
+    | n == 0 = 1
+    | otherwise = n * factorial (n - 1)
+main = do
+    print (factorial 5)
+<!--Exercise-->
+factorial n
+    | n == 0 = 1
+    | otherwise n * factorial (n - 1) -- dont forget the =
+main = do
+    print (factorial 5)
+<!--Exercise-->
+ourMax a b
+    | a > b   = a
+    | otherwise = b
+main = do
+    print (ourMax 2 5)
+<!--Chapter=other-->
 <!--Exercise-->
 main = do
     print True && False
