@@ -106,6 +106,34 @@ padding-bottom: 40px;
 <div class="col-lg-9">
 
 <h2>Example</h2>
+<pre class="haskell"><code>howBig n
+    | n &gt; 1000 = &quot;huge&quot;
+    | n &gt; 100  = &quot;big&quot;
+    | n &gt; 10   = &quot;small&quot;
+    | n &gt; 1    = &quot;tiny&quot;
+    | otherwise = &quot;dont know&quot;
+main = do
+    print (howBig 235)
+</code></pre>
+<pre class="no-highlight"><code>&quot;big&quot;
+</code></pre>
+
+<h2>Example</h2>
+<pre class="haskell"><code>-- order matters, only the first 
+-- satisfying condition is executed
+howBig n
+    | n &gt; 1    = &quot;tiny&quot;
+    | n &gt; 10   = &quot;small&quot;
+    | n &gt; 100  = &quot;big&quot;
+    | n &gt; 1000 = &quot;huge&quot;
+    | otherwise = &quot;dont know&quot;
+main = do
+    print (howBig 235)
+</code></pre>
+<pre class="no-highlight"><code>&quot;tiny&quot;
+</code></pre>
+
+<h2>Example</h2>
 <pre class="haskell"><code>factorial n
     | n == 0 = 1
     | n /= 0 = n * factorial (n - 1)
@@ -133,7 +161,7 @@ main = do
     print (factorial 5)
 </code></pre>
 <pre class="no-highlight"><code>
-languages/haskell/more functions/ex003.hs:4:1:
+languages/haskell/more functions/ex005.hs:4:1:
     parse error (possibly incorrect indentation or mismatched brackets)
 </code></pre>
 
@@ -195,12 +223,14 @@ currentPopover = 1;
 });
 </script>
 <script>
+if (document.location.hostname === "www.microexamples.com") {
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 ga('create', 'UA-52508387-1', 'auto');
 ga('send', 'pageview');
+}
 </script>
 
 </body>
